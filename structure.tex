@@ -1,0 +1,112 @@
+% Set basic page settings
+\usepackage[hmargin=25mm, vmargin=30mm]{geometry}
+
+% Includes the biggest font size flag
+\usepackage{moresize}
+
+% Allow creation of hyperlinks
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\urlstyle{same}
+
+% Used to include a headshot
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% Required for specification of custom fonts
+\usepackage{fontspec}
+\setmainfont[
+  Path = ./fonts/,
+  Extension = .otf,
+  BoldFont = Erewhon-Bold,
+  ItalicFont = Erewhon-Italic,
+  BoldItalicFont = Erewhon-BoldItalic,
+  SmallCapsFeatures = {Letters = SmallCaps}
+]{Erewhon-Regular}
+
+% Ensure international characters are displayed properly
+\usepackage{inputenc}
+
+% Set up a custom accent color
+\usepackage{color}
+\definecolor{slate}{rgb}{0.18,0.24,0.32}
+
+% Set section titles to use accent color
+\usepackage{sectsty}
+\sectionfont{\color{slate}}
+
+% Suppress section numbering
+\setcounter{secnumdepth}{0}
+
+% Use plain pages with no numbering or headers/footers
+\pagestyle{empty}
+
+% Stop paragraph indentation
+\setlength\parindent{0pt}
+
+
+% Amount to indent detail sections
+\newlength{\detailindent}
+\setlength{\detailindent}{20mm}
+
+% Text width for detail sections
+\newlength{\detailwidth}
+\setlength{\detailwidth}{\textwidth}
+\addtolength{\detailwidth}{-\detailindent}
+
+% Non-indenting itemize % TODO DEAL WITH THIS
+\newenvironment{itemize-noindent}
+{\setlength{\leftmargini}{0em}\begin{itemize}}
+{\end{itemize}}
+
+
+\newcommand{\header}[8] {
+  \parbox{0.75\textwidth} {
+    {\HUGE\color{slate}\textbf{#1}}
+    \begin{tabbing}
+      \hspace{60mm}        \= \kill
+      #2                   \> \url{#6} \\
+      #3                   \> \url{#7} \\
+      \href{mailto:#4}{#4} \> \url{#8} \\
+      \href{tel:#5}{#5}
+    \end{tabbing}
+  }
+  \parbox{0.25\textwidth} {
+    \begin{flushright}
+      \includegraphics[height=28mm]{headshot}
+    \end{flushright}
+  }
+}
+
+
+\newcommand{\job}[6]{
+\begin{tabbing}
+\hspace{\detailindent} \= \kill
+\textbf{#1} \>   \href{#4}{#3} \\
+\textbf{#2} \>\+ \textit{#5} \\
+\begin{minipage}{\detailwidth}
+\vspace{2mm}
+#6
+\end{minipage}
+\end{tabbing}
+\vspace{2mm}
+}
+
+
+\newcommand{\skill}[2]{
+  \begin{tabbing}
+    \hspace{\detailindent} \= \kill
+    \textbf{#1} \>   #2
+  \end{tabbing}
+  \vspace{-6mm}
+}
+
+
+\newcommand{\education}[3]{
+  \begin{tabbing}
+    \hspace{\detailindent} \= \kill
+    \textbf{#1} \>   #2 \\
+                \>\+ \textit{#3} \\
+  \end{tabbing}
+  \vspace{-6mm}
+}
