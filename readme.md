@@ -3,6 +3,7 @@
 This repository contains the LaTeX source code for a résumé, as well
 a supporting continuous build script that can be used to develop it.
 
+[![Build Status](https://travis-ci.org/lordjabez/resume.svg?branch=master)](https://travis-ci.org/lordjabez/resume)
 
 ## Files
 
