@@ -51,10 +51,10 @@
 \setlength{\detailwidth}{\textwidth}
 \addtolength{\detailwidth}{-\detailindent}
 
-% Non-indenting itemize % TODO DEAL WITH THIS
-\newenvironment{itemize-noindent}
-{\setlength{\leftmargini}{0em}\begin{itemize}}
-{\end{itemize}}
+% Non-indenting itemized list for job achievements
+\newenvironment{achievements}
+  {\setlength{\leftmargini}{4mm}\begin{itemize}}
+  {\end{itemize}}
 
 
 \newcommand{\header}[8] {
@@ -68,7 +68,7 @@
       \href{tel:#5}{#5}
     \end{tabbing}
   }
-  \parbox{0.25\textwidth} {
+  \parbox{0.24\textwidth} {
     \begin{flushright}
       \includegraphics[height=28mm]{headshot}
     \end{flushright}
@@ -76,14 +76,14 @@
 }
 
 
-\newcommand{\job}[6]{
+\newcommand{\job}[5]{
 \begin{tabbing}
 \hspace{\detailindent} \= \kill
-\textbf{#1} \>   \href{#4}{#3} \\
-\textbf{#2} \>\+ \textit{#5} \\
+\textbf{#2} \> #3 \\
+\textbf{#1} \>\+ \textit{#4} \\
 \begin{minipage}{\detailwidth}
 \vspace{2mm}
-#6
+#5
 \end{minipage}
 \end{tabbing}
 \vspace{2mm}
