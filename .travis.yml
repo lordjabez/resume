@@ -14,6 +14,7 @@ deploy:
   api_key:
     secure: fJBQzAKjgE5mcpwwhgrRzX2dvDNxQ344/5oyS/Zk/IVsGE6gG8UYvpuZleRqd7SdCvFnmkLY0ursY5o/6yM7S2fBdxaJTXksRE2+tafPHUsd48ORQ2o5p85cjn3dQTw8oos8JXhL6VvmGRkJClPLml28E5LCcYbmpcPFsmTYPm39TBYS+HpJCEII+mtSqo2BtpzF8A6seWSul+0iIJ6Xx0aNYfCkQRs9O7MED/Pf19E3/ZJge18gzh6mOLf2PxV/j/1eiR6wFyPcuNaNnmcaKjjq1rSJ11MYvT8dJm6jGqJUC9DAvAzfnU/AuDjm/ZSnhi/dUPbS6VglMNAqL0VIkd7Fx8XXy0Q4CjGx0lJYSo6mcUlJHaxhch0FDbrxPXbvin3vZQ8Yj47W1/5F42OO+7is32el7JtNTFw9bcJSaUtXY4KIAGfgTtAWDPoqsPMQJK0eybMoupsDkhBNHXLFn3yUp7wgbqgYzfLo+EaVdlkxSRoLgNox0uuYQAZDtXkO71BqUR34OPzvkDTWh3xr9MIc/h53MFDCFMl/AWv4KLahmOj29ryJN2fSrGEjOgOM+OwwE8Cdo7sX85WRCmnBylpVyfcjmtHk8YhfwF/GdLHLLLUehUN7GTk+bJNgwFWk/eE17QZhyg/tT7Vb1sIDLD6SN+edmNxMACuk2/eI7JU=
   file: resume.pdf
+  skip_cleanup: true
   on:
     repo: lordjabez/resume
     tags: true
