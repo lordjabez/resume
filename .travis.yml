@@ -1,0 +1,10 @@
+language: minimal
+
+services:
+  - docker
+
+install:
+- docker pull moss/xelatex
+
+script:
+- docker run --rm -v $(pwd):/data moss/xelatex xelatex resume.tex
