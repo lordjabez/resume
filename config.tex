@@ -24,9 +24,6 @@
   SmallCapsFeatures = {Letters = SmallCaps}
 ]{Erewhon-Regular}
 
-% Ensure international characters are displayed properly
-\usepackage{inputenc}
-
 % Set up a custom accent color
 \usepackage{color}
 \definecolor{slate}{rgb}{0.18,0.24,0.32}
@@ -47,7 +44,7 @@
 
 % Amount to indent detail sections
 \newlength{\detailindent}
-\setlength{\detailindent}{20mm}
+\setlength{\detailindent}{23mm}
 
 % Text width for detail sections
 \newlength{\detailwidth}
@@ -98,7 +95,6 @@
     \hspace{\detailindent} \= \kill
     \textbf{#1} \>   #2
   \end{tabbing}
-  \vspace{-6mm}
 }
 
 
