@@ -1,5 +1,5 @@
 % Set basic page settings
-\usepackage[hmargin=25mm, vmargin=30mm]{geometry}
+\usepackage[hmargin=15mm, vmargin=20mm]{geometry}
 
 % Allow for custom font sizes
 \usepackage{anyfontsize}
@@ -49,7 +49,7 @@
 % Text width for detail sections
 \newlength{\detailwidth}
 \setlength{\detailwidth}{\textwidth}
-\addtolength{\detailwidth}{-\detailindent}
+\addtolength{\detailwidth}{-1.05\detailindent}
 
 % Non-indenting itemized list for job achievements
 \newenvironment{achievements}
@@ -82,13 +82,15 @@
   \begin{tabbing}
     \hspace{\detailindent} \= \kill
     \textbf{#2} \> #3 \\
-    \textbf{#1} \>\+ \textit{#4} \\
-    \begin{minipage}{\detailwidth}
-      \vspace{2mm}
-      #5
-    \end{minipage}
+    \hspace{3.33mm}\textbf{|}  \> \textit{#4} \\
+    \textbf{#1} \> \\
   \end{tabbing}
-  \vspace{1mm}
+  \vspace{-9mm}
+  \hspace{\detailindent}
+  \begin{minipage}{\detailwidth}
+    #5
+  \end{minipage}
+  \vspace{3mm}
 }
 
 
@@ -106,13 +108,13 @@
     \textbf{#1} \>   #2 \\
                 \>\+ \textit{#3} \\
   \end{tabbing}
-  \vspace{-7mm}
+  \vspace{-6mm}
 }
 
 
 \newcommand{\credits} {
   \vspace{30mm}
   \begin{center}
-    \footnotesize{\textit{Version \version. Built using LaTeX. Source code available at \url{https://github.com/lordjabez/resume}.}}
+    \footnotesize{\textit{Version \version. Built using LaTeX, Docker, and Travis. Source code available at \url{https://github.com/lordjabez/resume}.}}
   \end{center}
 }
