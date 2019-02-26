@@ -1,37 +1,40 @@
 # Résumé Builder
 
-This repository contains the LaTeX source code for a résumé, as well
-a supporting continuous build script that can be used to develop it.
+This repository contains the LaTeX source code for a basic résumé, as well as a
+supporting continuous build framework that can be used to develop it. The latest
+PDF release can be found [here](https://github.com/lordjabez/resume/releases/latest).
 
 [![Build Status](https://travis-ci.org/lordjabez/resume.svg?branch=master)](https://travis-ci.org/lordjabez/resume)
 
+
+## Prerequisites
+
+The scripts use docker to ensure a consistent development environment
+for building. It can be downloaded from <https://www.docker.com>.
+
+The image used can be found at <https://hub.docker.com/r/lordjabez/xelatex>.
+
+These tools have only been tested on MacOS, but will probably work on any Linux platform.
+
+
 ## Files
 
-*   `resume.tex`: The source code for the résumé
-*   `resume.pdf`: Latest rendered version
-*   `develop.bash`: This script recompiles the résumé with each change
+*   `resume.tex`: Source code for the résumé content
 
+*   `setup.tex`: Source code for various LaTeX formatting options
 
-## Usage
+*   `.travis.yml`: Continuous integration script for [Travis CI](https://travis-ci.org/lordjabez/resume)
 
-These tools were made for MacOS, but should work for other platforms with some minor
-modification. To setup the dependencies, use `brew` to install the following:
+*   `bin/build.bash`: Script that uses Docker to render the résumé to PDF; the result is written to `dist/resume.pdf`
 
-```
-brew cask install mactex
-brew install fswatch
-```
-
-Then execute `develop.bash` in a terminal window; it will open the rendered PDF in
-Preview and then watch for changes to `resume.tex`, automatically compiling each
-time the file is changed. Preview will then automatically reload the new version
-when you click on it.
+*   `bin/develop.bash`: Builds and then opens the résumé, then rebuilds automatically on every source
+    file change (run this in the background during development to get near real-time rendering)
 
 
 ## Credits
 
 The inspiration for this résumé came from <http://www.latextemplates.com/template/wilson-resume-cv>,
-which is licensed under CC BY-NC-SA 3.0 (<http://creativecommons.org/licenses/by-nc-sa/3.0>). It's
+which is licensed under CC BY-NC-SA 3.0 (<http://creativecommons.org/licenses/by-nc-sa/3.0>). Its
 current form here has been heavily modified from the original.
 
 The font used is Erewhon, which can be found at <http://www.ctan.org/tex-archive/fonts/erewhon>.
