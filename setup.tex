@@ -1,13 +1,12 @@
 % Set basic page settings
 \usepackage[hmargin=25mm, vmargin=30mm]{geometry}
 
-% Includes the biggest font size flag
-\usepackage{moresize}
+% Allow for custom font sizes
+\usepackage{anyfontsize}
 
-% Allow creation of hyperlinks
-\usepackage{hyperref}
-\hypersetup{hidelinks}
-\urlstyle{same}
+% Set up a custom accent color
+\usepackage{color}
+\definecolor{slate}{rgb}{0.18,0.24,0.32}
 
 % Used to include a headshot
 \usepackage{graphicx}
@@ -24,9 +23,10 @@
   SmallCapsFeatures = {Letters = SmallCaps}
 ]{Erewhon-Regular}
 
-% Set up a custom accent color
-\usepackage{color}
-\definecolor{slate}{rgb}{0.18,0.24,0.32}
+% Allow creation of hyperlinks formatted to the accent color
+\usepackage{hyperref}
+\hypersetup{urlcolor=slate, colorlinks=true}
+\urlstyle{same}
 
 % Set section titles to use accent color
 \usepackage{sectsty}
@@ -59,38 +59,40 @@
 
 \newcommand{\header}[9] {
   \parbox{0.75\textwidth} {
-    {\HUGE\color{slate}\textbf{#1}}
+    {\fontsize{40}{48}\color{slate}\textbf{\href{https://github.com/lordjabez/resume}{#1}}}
     \begin{tabbing}
       \hspace{60mm}        \= \kill
+      \\
       #2                   \> \url{#6} \\
       #3                   \> \url{#7} \\
-      \href{mailto:#4}{#4} \> \url{#8} \\
-      \href{tel:#5}{#5}    \> \url{#9} \\
+      #4                   \> \url{#8} \\
+      #5                   \> \url{#9} \\
     \end{tabbing}
   }
   \parbox{0.24\textwidth} {
     \begin{flushright}
-      \includegraphics[height=28mm]{headshot}
+      \includegraphics[height=30mm]{headshot}
     \end{flushright}
   }
+  \vspace{-1mm}
 }
 
 
-\newcommand{\job}[5]{
-\begin{tabbing}
-\hspace{\detailindent} \= \kill
-\textbf{#2} \> #3 \\
-\textbf{#1} \>\+ \textit{#4} \\
-\begin{minipage}{\detailwidth}
-\vspace{2mm}
-#5
-\end{minipage}
-\end{tabbing}
-\vspace{2mm}
+\newcommand{\job}[5] {
+  \begin{tabbing}
+    \hspace{\detailindent} \= \kill
+    \textbf{#2} \> #3 \\
+    \textbf{#1} \>\+ \textit{#4} \\
+    \begin{minipage}{\detailwidth}
+      \vspace{2mm}
+      #5
+    \end{minipage}
+  \end{tabbing}
+  \vspace{1mm}
 }
 
 
-\newcommand{\skill}[2]{
+\newcommand{\skill}[2] {
   \begin{tabbing}
     \hspace{\detailindent} \= \kill
     \textbf{#1} \>   #2
@@ -98,7 +100,7 @@
 }
 
 
-\newcommand{\education}[3]{
+\newcommand{\education}[3] {
   \begin{tabbing}
     \hspace{\detailindent} \= \kill
     \textbf{#1} \>   #2 \\
