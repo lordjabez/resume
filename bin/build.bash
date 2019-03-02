@@ -10,4 +10,4 @@ mkdir -p dist
 VERSION=${TRAVIS_TAG-$(git describe)}
 
 docker run --rm -v $(pwd):/data lordjabez/xelatex xelatex -halt-on-error -output-directory dist "\def\version{$VERSION}\input resume.tex"
-cp "dist/resume.pdf" "dist/Judson Neer Resume v$VERSION.pdf"
+mv "dist/resume.pdf" "dist/judson-neer-resume-$VERSION.pdf"
