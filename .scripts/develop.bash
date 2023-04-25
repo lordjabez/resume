@@ -5,8 +5,8 @@ set -e
 cd "$(dirname "$0")/.."
 
 
-bin/build.bash
+.scripts/build.bash
 
 open dist/resume.pdf
 
-fswatch -o *.tex | xargs -n1 bin/build.bash
+fswatch -o *.tex | xargs -n1 .scripts/build.bash
