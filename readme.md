@@ -23,7 +23,7 @@ These tools have only been tested on MacOS, but will probably work on any Linux 
 
 *   `setup.tex`: Source code for various LaTeX formatting options
 
-*   `version.tx`: Source code for version string to insert into final document
+*   `version.tex`: Source code for version string to insert into final document
 
 *   `.scripts/build.bash`: Script that uses Docker to render the résumé to PDF; the result is written to `dist/resume.pdf`
 
