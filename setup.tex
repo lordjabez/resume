@@ -41,10 +41,9 @@
 % Stop paragraph indentation
 \setlength\parindent{0pt}
 
-
 % Amount to indent detail sections
 \newlength{\detailindent}
-\setlength{\detailindent}{15mm}
+\setlength{\detailindent}{17mm}
 
 % Text width for detail sections
 \newlength{\detailwidth}
@@ -53,7 +52,7 @@
 
 % Non-indenting itemized list for job achievements
 \newenvironment{achievements}
-  {\setlength{\leftmargini}{4mm}\begin{itemize}}
+  {\setlength{\leftmargini}{4mm}\setlength{\baselineskip}{-1mm}\begin{itemize}}
   {\end{itemize}}
 
 
@@ -85,7 +84,7 @@
     \hspace{3.33mm}\textbf{|}  \> \textit{#4} \\
     \textbf{#1} \> \\
   \end{tabbing}
-  \vspace{-9mm}
+  \vspace{-8mm}
   \hspace{\detailindent}
   \begin{minipage}{\detailwidth}
     #5
@@ -97,18 +96,18 @@
 \newcommand{\skill}[2] {
   \begin{tabbing}
     \hspace{\detailindent} \= \kill
-    \textbf{#1} \>   #2
+    \textbf{#1} \>   #2 \\
   \end{tabbing}
+  \vspace{-10mm}
 }
 
 
 \newcommand{\education}[3] {
   \begin{tabbing}
     \hspace{\detailindent} \= \kill
-    \textbf{#1} \>   #2 \\
-                \>\+ \textit{#3} \\
+    \textbf{#1} \>   #2, \textit{#3} \\
   \end{tabbing}
-  \vspace{-7mm}
+  \vspace{-10mm}
 }
 
 
