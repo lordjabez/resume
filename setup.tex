@@ -70,10 +70,24 @@
   }
   \parbox{0.24\textwidth} {
     \begin{flushright}
-      \includegraphics[height=40mm]{headshot}
+      \includegraphics[height=36mm]{headshot}
     \end{flushright}
   }
   \vspace{-1mm}
+}
+
+
+\newcommand{\project}[3] {
+  \begin{tabbing}
+    \hspace{\detailindent} \= \kill
+    \textbf{#1} \> \textit{#2} \\
+  \end{tabbing}
+  \vspace{-4mm}
+  \hspace{\detailindent}
+  \begin{minipage}{\detailwidth}
+    #3
+  \end{minipage}
+  \vspace{2mm}
 }
 
 
@@ -96,7 +110,7 @@
 \newcommand{\skill}[2] {
   \begin{tabbing}
     \hspace{\detailindent} \= \kill
-    \textbf{#1} \>   #2 \\
+    \textbf{#1} \> #2 \\
   \end{tabbing}
   \vspace{-10mm}
 }
@@ -105,7 +119,7 @@
 \newcommand{\education}[3] {
   \begin{tabbing}
     \hspace{\detailindent} \= \kill
-    \textbf{#1} \>   #2, \textit{#3} \\
+    \textbf{#1} \> #2, \textit{#3} \\
   \end{tabbing}
   \vspace{-10mm}
 }
