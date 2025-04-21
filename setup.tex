@@ -56,24 +56,23 @@
   {\end{itemize}}
 
 
-\newcommand{\header}[9] {
+\newcommand{\header}[6] {
   \parbox{0.75\textwidth} {
-    {\fontsize{40}{48}\color{slate}\textbf{\href{https://github.com/lordjabez/resume}{#1}} \hspace{1mm} (he/him)}
+    {\fontsize{32}{36}\color{slate}\textbf{\href{https://github.com/lordjabez/resume}{#1}} \hspace{1mm} (he/him)}
     \begin{tabbing}
-      \hspace{60mm}        \= \kill
-      \\
-      #2                   \> \url{#6} \\
-      #3                   \> \url{#7} \\
-      #4                   \> \url{#8} \\
-      #5                   \> \url{#9} \\
+      \hspace{60mm} \= \kill \\
+      #2            \> \url{#4} \\
+      #3            \> \url{#5} \\
+                    \> \url{#6} \\
     \end{tabbing}
   }
-  \parbox{0.24\textwidth} {
+  \parbox{0.25\textwidth} {
     \begin{flushright}
-      \includegraphics[height=36mm]{headshot}
+      \vspace{-4mm}
+      \includegraphics[height=27mm]{headshot}
     \end{flushright}
   }
-  \vspace{-1mm}
+  \vspace{-3mm}
 }
 
 
