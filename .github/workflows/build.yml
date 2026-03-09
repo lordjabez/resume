@@ -25,10 +25,11 @@ jobs:
           echo "\def\version{$VERSION_NUMBER}\input" > version.tex
           echo "VERSION_NUMBER=$VERSION_NUMBER" >> "$GITHUB_ENV"
       - name: Execute build
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: resume.tex
-          latexmk_use_xelatex: true
+          docker_image: lordjabez/xelatex:latest
+          compiler: xelatex
       - name: Rename output file
         run: mv "resume.pdf" "judson-neer-resume-$VERSION_NUMBER.pdf"
       - name: Upload resume artifact
