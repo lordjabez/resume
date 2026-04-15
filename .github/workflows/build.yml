@@ -3,42 +3,22 @@ name: Build
 on:
   push:
     branches:
-      - "**"
-    tags:
-      - "**"
-  pull_request:
-    branches:
-      - main
+      - '**'
 
 jobs:
-  build:
+  convert:
+    name: Build PDF
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - name: Write version file
-        run: |
-          VERSION_NUMBER="$(git describe --tags --abbrev=8 | sed 's/-.*g/+/' | tr -d 'v')"
-          VERSION_NUMBER="${VERSION_NUMBER:-0.0.0}"
-          echo "\def\version{$VERSION_NUMBER}\input" > version.tex
-          echo "VERSION_NUMBER=$VERSION_NUMBER" >> "$GITHUB_ENV"
-      - name: Execute build
-        uses: xu-cheng/latex-action@v4
+      - uses: baileyjm02/markdown-to-pdf@v1
         with:
-          root_file: resume.tex
-          docker_image: lordjabez/xelatex:latest
-          compiler: xelatex
-      - name: Rename output file
-        run: mv "resume.pdf" "judson-neer-resume-$VERSION_NUMBER.pdf"
-      - name: Upload resume artifact
-        uses: actions/upload-artifact@v4
+          input_dir: resume.md
+          output_dir: dist
+          build_html: false
+      - uses: actions/upload-artifact@v7
         with:
           name: resume
-          path: "*.pdf"
-      - name: Release resume
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v1
-        with:
-          files: "*.pdf"
+          path: dist
