@@ -7,7 +7,7 @@ jud.neer@gmail.com | +1 937-902-7765 | he/him
 
 ## Executive Summary
 
-Technologist building systems and organizations that promote human flourishing. Public sector leader for 25 years selling and delivering policy-forward solutions for diverse government agencies including defense, elections, unemployment, wage and hour enforcement, and workforce development. Experienced generalist across sales, product management, software development, cloud architecture, artificial intelligence, and technical leadership. Familiar with government procurement and complex buying cycles.
+Technologist building systems and organizations that promote human flourishing. Public sector leader for 25 years selling and delivering policy-forward solutions for diverse government agencies including defense, elections, unemployment, wage and hour enforcement, and workforce development. Experienced generalist across sales, product management, software engineering, cloud architecture, artificial intelligence, and technical leadership. Familiar with government procurement and complex buying cycles.
 
 Writer on the intersection of technology and humanity at [Making of Things](https://makingofthings.com). Developer of numerous open source thingamabobs on [GitHub](https://github.com/lordjabez), some with the assistance of Claude Code. Avid runner, amateur musician, and owner of every iteration of the Raspberry Pi.
 
@@ -86,7 +86,7 @@ _February 2019 – April 2019_
 _September 2016 – April 2019_
 
 - Built an IoT device communicating with a variety of weighing scale brands, publishing measurements over Internet of Things protocols; used cloud infrastructure for data collection, status monitoring, and OTA software updates
-- Developed a mobile B2B app for a third-party supplier, generating $1M of sales to date
+- Developed a mobile B2B app for a third-party supplier, generating $200K of annual sales over the past 8 years
 - Sold the solution to a scale manufacturer for integration into their marquee product line
 
 
