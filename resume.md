@@ -101,7 +101,7 @@ _September 2016 – April 2019_
 ## Skills and Competencies
 
 - **AI/ML**: Anthropic Claude, Amazon Bedrock, Google Vertex AI, Microsoft Azure AI, Agentic Workflows, MCP, RAG
-- **Coding**: Python, Node.js, JavaScript, TypeScript, Java, C, C++, C#, Perl, Bash, LaTeX
+- **Coding**: Python, Node.js, JavaScript, TypeScript, Java, C, C++, C#, .NET, Perl, Bash, LaTeX
 - **Infrastructure**: AWS, GCP, GovCloud, Networking, Docker, Kubernetes, Helm, Terraform, CDK, Linux, MacOS
 - **Data**: MySQL, PostgreSQL, MongoDB, Cassandra, Elasticsearch, BigQuery, Pandas, NumPy, Data Lakes
 - **Tools**: GitHub, Monday, Jira, Confluence, Excalidraw, Draw.io, Markdown, Microsoft Office, Google Workspace
