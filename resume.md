@@ -116,7 +116,7 @@ _September 2016 – April 2019_
 - **Anthropic Academy**: AI Fluency: Framework & Foundations · Building with the Claude API · Claude Code in Action
 - **Amazon Web Services**: Generative AI Developer Professional · DevOps Engineer Professional · Solutions Architect Professional · Data Engineer Associate · Machine Learning Engineer Associate · Security Specialty · Database Specialty · Advanced Networking Specialty
 - **Google Cloud Platform**: Professional Cloud Architect · Associate Cloud Engineer · Generative AI Leader · Pre-sales Technical Expert (Application Modernization, AI/ML, Data Analytics, Database Engineer, Networking, Infrastructure Modernization, Security, Workspace)
-- **Microsoft Azure**: Azure AI Engineer Associate · Azure AI Fundamentals
+- **Microsoft Azure**: Azure AI Engineer Associate · Azure AI Fundamentals · Azure Fundamentals
 
 ## Formal Education
 
