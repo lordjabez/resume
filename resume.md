@@ -86,7 +86,7 @@ _February 2019 – April 2019_
 _September 2016 – April 2019_
 
 - Built an IoT device communicating with a variety of weighing scale brands, publishing measurements over Internet of Things protocols; used cloud infrastructure for data collection, status monitoring, and OTA software updates
-- Developed a mobile B2B app for a third-party supplier, generating $200K of annual sales over the past 8 years
+- Developed a mobile B2B app for a third-party supplier, generating $1.3M of sales over the past 8 years
 - Sold the solution to a scale manufacturer for integration into their marquee product line
 
 
