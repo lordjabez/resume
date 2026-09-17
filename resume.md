@@ -18,9 +18,9 @@ Writer on the intersection of technology and humanity at [Making of Things](http
 _October 2025 – Present_
 
 - Creating a new outcome-focused business vertical whose charter is to help US federal, state, and local governments achieve their workforce modernization policy goals, both for internal agency staff and the general public
-- Inventing novel uses of LLMs such as Claude to safely enhance government operations and service delivery, maximize staff effectiveness, reduce cost, and ultimately improve constituent lives
+- Inventing novel uses of LLMs such as Claude and Gemini to safely enhance government operations and service delivery, maximize staff effectiveness, reduce cost, and ultimately improve constituent lives
 - Developing a $50M+ sales pipeline through customer-facing relationship-building alongside account executives, prototype development, thought leadership, and technical RFP response writing
-- Piloting an AI-powered teaming model using Claude Code that accelerates business value, streamlines communication, automates customer requirements refinement and code writing, and builds repeatable patterns for future projects
+- Piloting an AI-powered agentic teaming model that accelerates business value, streamlines communication, automates customer requirements refinement and code writing, and builds repeatable patterns for future projects
 
 ### Chief Technology Officer, Research Improving People's Lives
 _April 2023 – October 2025_
@@ -92,15 +92,15 @@ _September 2016 – April 2019_
 
 ## Selected Writings
 
-- **[Put Aside The Ranger](https://makingofthings.com/?p=1868)** — One of my favorite pieces, it's advice I share regularly with engineers who aspire to or are stepping into technical team leadership
-- **[Know Thyself](https://makingofthings.com/?p=1912)** — I wanted to learn more about embeddings and clustering techniques, so I used them to analyze my blog posts and wrote about the process
-- **[Light From Light](https://makingofthings.com/?p=2856)** – The first in a series exploring creative collaboration with artificial intelligence, drawing on Tolkien's idea of sub-creation as a metaphor for AI bearing the image of humans via training data
-- **[Unfunded Mandates](https://makingofthings.com/?p=2924)** – My take on the bottleneck that is human review of AI-generated content, specifically a rule-of-thumb for the human producer to not ask more of a reviewer than they ask of themselves
+- **[Put Aside The Ranger](https://makingofthings.com/?p=1868)**: One of my favorite pieces, it's advice I share regularly with engineers who aspire to or are stepping into technical team leadership
+- **[Know Thyself](https://makingofthings.com/?p=1912)**: I wanted to learn more about embeddings and clustering techniques, so I used them to analyze my blog posts and wrote about the process
+- **[Light From Light](https://makingofthings.com/?p=2856)**: The first in a series exploring creative collaboration with artificial intelligence, drawing on Tolkien's idea of sub-creation as a metaphor for AI bearing the image of humans via training data
+- **[Unfunded Mandates](https://makingofthings.com/?p=2924)**: My take on the bottleneck that is human review of AI-generated content, specifically a rule-of-thumb for the human producer to not ask more of a reviewer than they ask of themselves
 
 
 ## Skills and Competencies
 
-- **AI/ML**: Anthropic Claude, Amazon Bedrock, Google Vertex AI, Microsoft Azure AI, Agentic Workflows, MCP, RAG
+- **AI/ML**: Anthropic Claude, Amazon Bedrock, Google Gemini, Microsoft Azure AI, Agentic Workflows, MCP, RAG
 - **Coding**: Python, Node.js, JavaScript, TypeScript, Java, C, C++, C#, .NET, Perl, Bash, LaTeX
 - **Infrastructure**: AWS, GCP, GovCloud, Networking, Docker, Kubernetes, Helm, Terraform, CDK, Linux, MacOS
 - **Data**: MySQL, PostgreSQL, MongoDB, Cassandra, Elasticsearch, BigQuery, Pandas, NumPy, Data Lakes
@@ -113,10 +113,10 @@ _September 2016 – April 2019_
 
 ## Professional Certifications
 
-- **Anthropic Academy**: AI Fluency: Framework & Foundations · Building with the Claude API · Claude Code in Action
-- **Amazon Web Services**: Generative AI Developer Professional · DevOps Engineer Professional · Solutions Architect Professional · Data Engineer Associate · Machine Learning Engineer Associate · Security Specialty · Database Specialty · Advanced Networking Specialty
-- **Google Cloud Platform**: Professional Cloud Architect · Associate Cloud Engineer · Generative AI Leader · Pre-sales Technical Expert (Application Modernization, AI/ML, Data Analytics, Database Engineer, Networking, Infrastructure Modernization, Security, Workspace)
-- **Microsoft Azure**: Azure AI Engineer Associate · Azure AI Fundamentals · Azure Fundamentals
+- **Anthropic**: Claude Certified Architect Foundations, Claude Certified Associate Foundations
+- **Amazon Web Services**: Generative AI Developer Professional, DevOps Engineer Professional, Solutions Architect Professional, Data Engineer Associate, Machine Learning Engineer Associate, Security Specialty, Database Specialty, Advanced Networking Specialty
+- **Google Cloud**: Professional Cloud Architect, Associate Cloud Engineer, Generative AI Leader, Pre-sales Technical Expert (Application Modernization, AI/ML, Data Analytics, Database Engineer, Networking, Infrastructure Modernization, Security, Workspace)
+- **Microsoft Azure**: Azure AI Engineer Associate, Azure AI Fundamentals, Azure Fundamentals
 
 ## Formal Education
 
