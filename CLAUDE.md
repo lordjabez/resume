@@ -22,4 +22,6 @@ There are no tests or linters. To verify an edit, build and check the PDF render
 
 ## CI
 
-`.github/workflows/build.yml` builds the PDF on every push using `baileyjm02/markdown-to-pdf`, which is not the same renderer as the local build, so CI output may be formatted differently. The `Dockerfile` (md-to-pdf on node:alpine) exists to eventually make CI match local builds; see the To-Do in `README.md` for planned release/versioning work.
+`.github/workflows/build.yml` runs the same `bin/build.bash` on a `macos-latest` runner with md-to-pdf pinned to the local version. macOS matters: md-to-pdf's stylesheet uses the system font stack, which resolves to San Francisco on macOS and to different-metric fonts on Linux, and that moves page breaks. Keep the CI md-to-pdf version in sync with the local install.
+
+`--pdf-options` replaces md-to-pdf's `pdf_options` default rather than merging with it, so the page format falls back to Puppeteer's Letter default (not md-to-pdf's A4). See the To-Do in `README.md` for planned release/versioning work.
