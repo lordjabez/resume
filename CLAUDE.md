@@ -20,6 +20,7 @@ The main requirement is that local and CI builds paginate identically. Everythin
 - Font: Inter is loaded via `@font-face` from `fonts/` (set in `md-to-pdf.config.js`), never from the OS. If markup starts using a new weight or style (e.g. bold italic), add that woff2 file and `@font-face` rule, or Chrome will synthesize it or fall back to a system font.
 - Chrome: `package-lock.json` pins puppeteer, which pins the Chrome build downloaded in the image.
 - Platform: `bin/build.bash` always uses `linux/amd64` (Chrome for Testing has no linux/arm64 build, so Apple Silicon runs it under emulation).
+- Inter's contextual alternates (`calt`) are disabled in the config CSS. When enabled, hyphens, en dashes, parens, and `+` next to digits or capitals render as alternate glyphs with no Unicode mapping, and extractors like pypdf and pdfminer (typical of ATS parsers) read them as private-use characters. `pdftotext` hides the problem, so check with `uv run --with pypdf` that extracted text has no ``–`` characters.
 - Page settings live in `md-to-pdf.config.js`. Don't pass `--pdf-options` on the CLI: it replaces the config's `pdf_options` wholesale instead of merging.
 
 ## Formatting conventions

@@ -10,6 +10,8 @@ module.exports = {
     @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; src: url('fonts/Inter-Regular.woff2') format('woff2'); }
     @font-face { font-family: 'Inter'; font-style: italic; font-weight: 400; src: url('fonts/Inter-Italic.woff2') format('woff2'); }
     @font-face { font-family: 'Inter'; font-style: normal; font-weight: 700; src: url('fonts/Inter-Bold.woff2') format('woff2'); }
-    body { font-family: 'Inter', sans-serif; }
+    /* Inter's contextual alternates swap in dash/paren/plus glyphs that have no
+       Unicode mapping, so many PDF text extractors (and ATSes) read them as garbage */
+    body { font-family: 'Inter', sans-serif; font-feature-settings: 'calt' 0; }
   `,
 };
