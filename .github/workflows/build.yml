@@ -6,16 +6,41 @@ on:
       - '**'
 
 jobs:
-  convert:
+  build:
     name: Build PDF
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
       - name: Build PDF
         run: bin/build.bash
-      - uses: actions/upload-artifact@v7
+      - name: Assemble site
+        run: |
+          mkdir site
+          cp resume.pdf site/judson-neer-resume.pdf
+          cat > site/index.html <<'EOF'
+          <!doctype html>
+          <meta http-equiv="refresh" content="0; url=judson-neer-resume.pdf">
+          <title>Judson Neer Résumé</title>
+          <a href="judson-neer-resume.pdf">Judson Neer Résumé (PDF)</a>
+          EOF
+      - uses: actions/upload-pages-artifact@v5
         with:
-          name: resume
-          path: resume.pdf
+          path: site
+
+  deploy:
+    name: Publish to GitHub Pages
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}judson-neer-resume.pdf
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

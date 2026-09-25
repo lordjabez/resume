@@ -30,4 +30,4 @@ The main requirement is that local and CI builds paginate identically. Everythin
 
 ## CI
 
-`.github/workflows/build.yml` runs `bin/build.bash` on `ubuntu-latest` and uploads `resume.pdf` as an artifact. See the To-Do in `README.md` for planned release/versioning work.
+`.github/workflows/build.yml` runs `bin/build.bash` on `ubuntu-latest` for every branch. On `main` it deploys the PDF to GitHub Pages as `judson-neer-resume.pdf` (plus an `index.html` redirect), giving a stable link that opens inline: <https://lordjabez.github.io/resume/judson-neer-resume.pdf>. There is no versioning or GitHub Releases; release assets are served as `application/octet-stream` attachments, so browsers download them instead of displaying them.

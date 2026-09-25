@@ -9,5 +9,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends unzip \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /work
+# build.bash runs as the host UID, which has no passwd entry, so HOME would be
+# the read-only "/" and Chrome's crashpad handler fails to start without it
+ENV HOME=/tmp
 ENTRYPOINT ["/app/node_modules/.bin/md-to-pdf", "--config-file", "/work/md-to-pdf.config.js", \
             "--launch-options", "{\"args\": [\"--no-sandbox\", \"--disable-dev-shm-usage\"]}"]

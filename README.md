@@ -1,7 +1,7 @@
 # Jud's Résumé
 
-This repository contains Jud Neer's resume in Markdown and PDF formats. See the
-[latest PDF release](https://github.com/lordjabez/resume/releases/latest).
+This repository contains Jud Neer's resume in Markdown and PDF formats. The latest PDF is always at
+<https://lordjabez.github.io/resume/judson-neer-resume.pdf> (or just <https://lordjabez.github.io/resume/>).
 
 [![Build Status](https://github.com/lordjabez/resume/actions/workflows/build.yml/badge.svg)](https://github.com/lordjabez/resume/actions/workflows/build.yml)
 
@@ -19,27 +19,13 @@ Docker. Builds run in a container so the output is identical on any machine, inc
 - `fonts/`: Bundled [Inter](https://rsms.me/inter/) font files (SIL Open Font License)
 - `Dockerfile`, `package.json`, `package-lock.json`: Pinned md-to-pdf, Puppeteer, and Chrome versions
 
+## Publishing
+
+Every push builds the PDF in CI. Pushes to `main` also deploy it to GitHub Pages, replacing the
+previous version, so the links above always serve the latest build and open inline in the browser.
+
 ## Consistent rendering
 
 Page breaks depend on text metrics, so every input to layout is pinned: the font is loaded from
 `fonts/` instead of the OS, the lockfile fixes the Chrome build, and the image always runs as
 `linux/amd64` (under emulation on Apple Silicon, since Chrome for Testing has no Linux ARM build).
-
-## To-Do
-
-- Add the proper release stuff to CI/CD including tagging and versioning (by date)
-
-```yaml
-      - name: Rename output file
-        run: mv "resume.pdf" "judson-neer-resume-$VERSION_NUMBER.pdf"
-      - name: Upload resume artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume
-          path: "*.pdf"
-      - name: Release resume
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v1
-        with:
-          files: "*.pdf"
-```
