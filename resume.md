@@ -113,7 +113,7 @@ _September 2016 – April 2019_
 
 ## Professional Certifications
 
-- **Anthropic**: Claude Certified Architect Foundations, Claude Certified Associate Foundations
+- **Anthropic**: Claude Certified Architect Foundations, Claude Certified Associate Foundations, Claude Certified Developer Foundations
 - **Amazon Web Services**: Generative AI Developer Professional, DevOps Engineer Professional, Solutions Architect Professional, Data Engineer Associate, Machine Learning Engineer Associate, Security Specialty, Database Specialty, Advanced Networking Specialty
 - **Google Cloud**: Professional Cloud Architect, Associate Cloud Engineer, Generative AI Leader, Pre-sales Technical Expert (Application Modernization, AI/ML, Data Analytics, Database Engineer, Networking, Infrastructure Modernization, Security, Workspace)
 - **Microsoft Azure**: Azure AI Engineer Associate, Azure AI Fundamentals, Azure Fundamentals
