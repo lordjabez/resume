@@ -3,7 +3,7 @@
 This repository contains Jud Neer's resume in Markdown and PDF formats. The latest
 PDF release can be found [here](https://github.com/lordjabez/resume/releases/latest).
 
-[![Build Status](https://github.com/lordjabez/resume/actions/workflows/build.yml/badge.svg)](https://github.com/lordjabez/file-memoizer/actions/workflows/build.yml)
+[![Build Status](https://github.com/lordjabez/resume/actions/workflows/build.yml/badge.svg)](https://github.com/lordjabez/resume/actions/workflows/build.yml)
 
 
 ## Prerequisites
