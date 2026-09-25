@@ -7,19 +7,23 @@ This repository contains Jud Neer's resume in Markdown and PDF formats. See the
 
 ## Prerequisites
 
-```bash
-npm install -g md-to-pdf
-```
+Docker. Builds run in a container so the output is identical on any machine, including CI.
 
 ## Files
 
 - `resume.md`: Markdown source for the résumé content
-- `bin/build.bash`: Script that uses md-to-pdf to produce a PDF; the result is written to `resume.pdf`
+- `bin/build.bash`: Builds the Docker image (if needed) and uses it to produce `resume.pdf`
 - `bin/develop.bash`: Builds and then opens the résumé, then rebuilds automatically on every source
     file change (run this in the background during development to get near real-time rendering)
+- `md-to-pdf.config.js`: Page size, margins, and font settings
+- `fonts/`: Bundled [Inter](https://rsms.me/inter/) font files (SIL Open Font License)
+- `Dockerfile`, `package.json`, `package-lock.json`: Pinned md-to-pdf, Puppeteer, and Chrome versions
 
-CI runs `bin/build.bash` on a macOS runner so the system font (San Francisco), and therefore
-the page breaks, match a local build.
+## Consistent rendering
+
+Page breaks depend on text metrics, so every input to layout is pinned: the font is loaded from
+`fonts/` instead of the OS, the lockfile fixes the Chrome build, and the image always runs as
+`linux/amd64` (under emulation on Apple Silicon, since Chrome for Testing has no Linux ARM build).
 
 ## To-Do
 

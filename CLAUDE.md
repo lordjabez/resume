@@ -4,15 +4,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Single-document repo: `resume.md` is the source of truth for Jud's résumé, rendered to `resume.pdf` with [md-to-pdf](https://github.com/simonhaenisch/md-to-pdf). The PDF is gitignored (`**/*.pdf`), so never try to commit it.
+Single-document repo: `resume.md` is the source of truth for Jud's résumé, rendered to `resume.pdf` with [md-to-pdf](https://github.com/simonhaenisch/md-to-pdf) inside Docker. The PDF is gitignored (`**/*.pdf`), so never try to commit it.
 
 ## Commands
 
-- Prerequisite: `npm install -g md-to-pdf`
-- Build once: `bin/build.bash` (writes `resume.pdf`, 16mm margins)
-- Live preview: `bin/develop.bash` (builds, opens the PDF, then rebuilds on every change to `resume.md`; run in the background)
+- Build once: `bin/build.bash` (builds the `resume-builder` image if needed, writes `resume.pdf`; extra args pass through to md-to-pdf)
+- Live preview: `bin/develop.bash` (builds, opens the PDF, then runs md-to-pdf `--watch` in the container; run in the background)
 
-There are no tests or linters. To verify an edit, build and check the PDF renders and paginates correctly.
+There are no tests or linters. To verify an edit, build and check that pages break where intended, e.g. compare `pdftotext -f N -l N` first/last lines per page, and `pdffonts resume.pdf` should list only Inter.
+
+## Rendering consistency
+
+The main requirement is that local and CI builds paginate identically. Everything that affects layout is pinned:
+
+- Font: Inter is loaded via `@font-face` from `fonts/` (set in `md-to-pdf.config.js`), never from the OS. If markup starts using a new weight or style (e.g. bold italic), add that woff2 file and `@font-face` rule, or Chrome will synthesize it or fall back to a system font.
+- Chrome: `package-lock.json` pins puppeteer, which pins the Chrome build downloaded in the image.
+- Platform: `bin/build.bash` always uses `linux/amd64` (Chrome for Testing has no linux/arm64 build, so Apple Silicon runs it under emulation).
+- Page settings live in `md-to-pdf.config.js`. Don't pass `--pdf-options` on the CLI: it replaces the config's `pdf_options` wholesale instead of merging.
 
 ## Formatting conventions
 
@@ -22,6 +30,4 @@ There are no tests or linters. To verify an edit, build and check the PDF render
 
 ## CI
 
-`.github/workflows/build.yml` runs the same `bin/build.bash` on a `macos-latest` runner with md-to-pdf pinned to the local version. macOS matters: md-to-pdf's stylesheet uses the system font stack, which resolves to San Francisco on macOS and to different-metric fonts on Linux, and that moves page breaks. Keep the CI md-to-pdf version in sync with the local install.
-
-`--pdf-options` replaces md-to-pdf's `pdf_options` default rather than merging with it, so the page format falls back to Puppeteer's Letter default (not md-to-pdf's A4). See the To-Do in `README.md` for planned release/versioning work.
+`.github/workflows/build.yml` runs `bin/build.bash` on `ubuntu-latest` and uploads `resume.pdf` as an artifact. See the To-Do in `README.md` for planned release/versioning work.

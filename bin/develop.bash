@@ -9,4 +9,4 @@ bin/build.bash
 
 open resume.pdf
 
-md-to-pdf --watch --pdf-options '{"margin": "16mm"}' resume.md
+bin/build.bash --watch

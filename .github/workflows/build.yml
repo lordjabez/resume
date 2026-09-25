@@ -8,15 +8,11 @@ on:
 jobs:
   convert:
     name: Build PDF
-    # macOS provides the San Francisco system font that local builds use,
-    # which keeps text metrics (and therefore page breaks) identical
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - name: Install md-to-pdf
-        run: npm install -g md-to-pdf@5.2.5
       - name: Build PDF
         run: bin/build.bash
       - uses: actions/upload-artifact@v7
