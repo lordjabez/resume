@@ -1,6 +1,6 @@
 # Judson Neer
 
-jud.neer@gmail.com | +1 937-902-7765 | he/him
+jud.neer@gmail.com | +1 937-902-7765 | San Diego, California, USA | he/him
 
 [linkedin.com/in/judsonneer](https://linkedin.com/in/judsonneer) | [github.com/lordjabez](https://github.com/lordjabez) | [makingofthings.com](https://makingofthings.com)
 
@@ -17,10 +17,10 @@ Writer on the intersection of technology and humanity at [Making of Things](http
 ### Senior Industry Principal, Infosys Public Services
 _October 2025 – Present_
 
-- Creating a new outcome-focused business vertical whose charter is to help US federal, state, and local governments achieve their workforce modernization policy goals, both for internal agency staff and the general public
-- Inventing novel uses of LLMs such as Claude and Gemini to safely enhance government operations and service delivery, maximize staff effectiveness, reduce cost, and ultimately improve constituent lives
-- Developing a $50M+ sales pipeline through customer-facing relationship-building alongside account executives, prototype development, thought leadership, and technical RFP response writing
-- Piloting an AI-powered agentic teaming model that accelerates business value, streamlines communication, automates customer requirements refinement and code writing, and builds repeatable patterns for future projects
+- Created a new outcome-focused business vertical whose charter is to help US federal, state, and local governments achieve their workforce modernization policy goals, both for internal agency staff and the general public
+- Invented novel uses of LLMs such as Claude and Gemini to safely enhance government operations and service delivery, maximize staff effectiveness, reduce cost, and ultimately improve constituent lives
+- Developed a $50M sales pipeline through customer-facing relationship-building alongside account executives, prototype development, thought leadership, and technical RFP response writing
+- Piloted an agentic AI teaming model that accelerated business value, streamlined communication, automated customer requirements refinement and code writing, built repeatable patterns for future projects, and doubled project profitability
 
 ### Chief Technology Officer, Research Improving People's Lives
 _April 2023 – October 2025_
@@ -37,11 +37,11 @@ _April 2023 – October 2025_
 ### Delivery Practice Manager, Amazon Web Services
 _April 2019 – April 2023_
 
-- Led the professional services team of solutions architects and software engineers that built transformative solutions for US-based education and state & local government customers, assigning resources and balancing competing priorities across engagements
+- Led a professional services team of solutions architects and software engineers that built transformative solutions for US-based education and state & local government customers, assigning resources and balancing competing priorities across engagements, and owning P&L for the practice
 - Scaled the delivery organization from 8 to 40 people, mentoring both individual contributors and front-line managers, and participating in recruiting and DEI efforts within the group
 - Collaborated with executive sales teams to book and then deliver several multi-million-dollar projects in areas such as unemployment insurance, elections, health care, and online learning
 - Designed a cloud-based batch process architecture to insulate an aging AS/400 system from 20x the typical user load due to the COVID-19 pandemic, and implemented both a serverless web application (on AWS Lambda) and automated phone system (on Amazon Connect) to collect claimant information; launched minimum viable product in 10 days, ahead of governor's emergency timeline, increasing throughput a hundred-fold and clearing the agency's payment backlog
-- Sold and led a year-long iterative improvement effort through design conversations with executive stakeholders, translation to technical requirements, and cross-functional team implementation and deployment
+- Sold and led an $11M state government modernization through design conversations with executive stakeholders, translation to technical requirements, and cross-functional team implementation and deployment
 - Interviewed 180 candidates for both technical and non-technical roles across Amazon; was primary decision maker as a Bar Raiser in 60 of them, and mentored 6 others through the Bar Raiser training program
 - Developed, documented, and drove adoption of a suite of internal automation tools used by dozens of teams Amazon-wide, saving the company over $10M annually
 - Published both internal and public-facing software packages and other technical artifacts (see GitHub for details)
@@ -86,7 +86,7 @@ _February 2019 – April 2019_
 _September 2016 – April 2019_
 
 - Built an IoT device communicating with a variety of weighing scale brands, publishing measurements over Internet of Things protocols; used cloud infrastructure for data collection, status monitoring, and OTA software updates
-- Developed a mobile B2B app for a third-party supplier, generating $1.3M of sales over the past 8 years
+- Developed a mobile B2B app for a third-party supplier, generating $1.3M in sales as of 2026
 - Sold the solution to a scale manufacturer for integration into their marquee product line
 
 
@@ -105,8 +105,8 @@ _September 2016 – April 2019_
 - **Infrastructure**: AWS, GCP, GovCloud, Networking, Docker, Kubernetes, Helm, Terraform, CDK, Linux, MacOS
 - **Data**: MySQL, PostgreSQL, MongoDB, Cassandra, Elasticsearch, BigQuery, Pandas, NumPy, Data Lakes
 - **Tools**: GitHub, Monday, Jira, Confluence, Excalidraw, Draw.io, Markdown, Microsoft Office, Google Workspace
+- **Standards**: NIST 800-53, FedRAMP, HIPAA, OWASP, Section 508, WCAG
 - **People**: Pre-Sales, Management, Interviewing, Remote Collaboration, Public Speaking, Classroom Teaching
-- **Domains**: Defense, Education, Elections, Workforce Development, Unemployment, Public Policy, Open Source
 
 
 <div style="page-break-before: always;"></div>
