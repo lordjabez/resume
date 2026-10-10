@@ -2,7 +2,7 @@
 
 jud.neer@gmail.com | +1 937-902-7765 | San Diego, California, USA | he/him
 
-[linkedin.com/in/judsonneer](https://linkedin.com/in/judsonneer) | [github.com/lordjabez](https://github.com/lordjabez) | [makingofthings.com](https://makingofthings.com)
+[linkedin.com/in/judsonneer](https://linkedin.com/in/judsonneer) | [github.com/lordjabez](https://github.com/lordjabez) | [makingofthings.com](https://makingofthings.com) | [jud.works](https://jud.works)
 
 
 ## Executive Summary
